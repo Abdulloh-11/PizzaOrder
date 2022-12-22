@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <form id="form">
+      <h2 class="wrapper-title">Pizza order</h2>
+
+      <span class="span1">4 ta harfdan kop bolsin ismiz</span>
+      <input id="imya" class="inp" type="text" name="user_name" required placeholder="User name" />
+      <span class="span2">Nomer 9 raqamdan kop bolsin</span>
+      <input id="nomer" class="inp" type="number" name="user_phone" placeholder="Phone number" required />
+      <input class="inp" type="text" name="user_email" placeholder="Adress" required />
+
+      <div class="form-select-block">
+        <label for="select" class="form-select-label">Dough thickness:</label>
+        <select id="select" class="form-select" name="thikness">
+          <option selected disabled>none</option>
+          <option data-price="10" value="thin" class="select__option">Thin</option>
+          <option data-price="12" value="medium" class="select__option">Medium</option>
+          <option data-price="15" value="thick" class="select__option">Thick</option>
+        </select>
+      </div>
+
+      <div class="d-flex">
+        <h4 class="form__title">Size</h4>
+
+        <div class="size-wrapper">
+          <input data-price="10" value="25sm" type="radio" class="size-wrapper__input" name="size" id="small-size">
+          <label for="small-size" class="size-wrapper__label">25sm</label>
+
+          <input data-price="12" value="30sm" type="radio" class="size-wrapper__input" name="size" id="normal-size">
+          <label for="normal-size" class="size-wrapper__label">30sm</label>
+
+          <input data-price="15" value="35sm" type="radio" class="size-wrapper__input" name="size" id="big-size">
+          <label for="big-size" class="size-wrapper__label">35sm</label>
+        </div>
+      </div>
+
+
+
+      <h3 class="title">On Pizza:</h3>
+      <div class="checkbox-wrapper">
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Tomato" data-add="Pomidor" id="tomatoes"
+            class="hold__input">
+          <label for="tomatoes" class="hold__label">Tomato</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Turkey meat" data-add="Tuzlangan bodring"
+            id="pickles" class="hold__input">
+          <label for="pickles" class="hold__label">Turkey meat</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Pickled cucumber" data-add="Kurka go'shti" id="meat"
+            class="hold__input">
+          <label for="meat" class="hold__label">Pickled cucumber</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Mushroom" value="Mushroom" id="mushroom"
+            class="hold__input">
+          <label for="mushroom" class="hold__label">Mushroom</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Ollive" data-add="Ollive" id="olive"
+            class="hold__input">
+          <label for="olive" class="hold__label">Ollive</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Horse meat" data-add="Qazi" id="sausage"
+            class="hold__input">
+          <label for="sausage" class="hold__label">Horse meat</label>
+        </div>
+      </div>
+
+      <div class="checkbox-wrapper1">
+        <h2>Add:</h2>
+
+
+        <div class="d-flex gap1">
+          <div class="hold">
+            <input data-price1="3" value="Pepper" type="checkbox" id="bitter" class="hold__inputt ">
+            <label for="bitter" class="hold__label">Pepper</label>
+          </div>
+
+          <div class="hold">
+            <input data-price1="3" value="Sausages" type="checkbox" id="sausages" class="hold__inputt">
+            <label for="sausages" class="hold__label">Sausages</label>
+          </div>
+        </div>
+      </div>
+      <div class="btn-block">
+        <button class="btn btn-info" type="submit">Save</button>
+      </div>
+
+    </form>
+    <div class="Info">
+      <ul id="list"></ul>
+     
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal_window">
+      <p>Sizning zakasingiz qabul boldi &#10004;</p>
+     
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="app.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
